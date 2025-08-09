@@ -1,0 +1,40 @@
+/* Styles simples et responsive */
+:root{
+  --max-width:980px;
+  --accent:#2b2b2b;
+}
+
+*{box-sizing:border-box}
+body{
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color:#111;
+  margin:0;
+  line-height:1.5;
+  background:#f7f7f8;
+}
+
+.container{max-width:var(--max-width);margin:1.5rem auto;padding:0 1rem}
+
+.site-header{background:#fff;border-bottom:1px solid #e6e6e6}
+.site-header .wrap{max-width:var(--max-width);margin:0 auto;padding:0.75rem 1rem;display:flex;align-items:center;justify-content:space-between}
+.brand a{color:var(--accent);text-decoration:none}
+.main-nav a{margin-left:1rem;text-decoration:none;color:#555;font-size:0.95rem}
+
+.hero{background:#fff;padding:2rem;border-radius:6px;margin-bottom:1rem}
+.hero h2{margin:0 0 0.5rem}
+
+.liste-cours{list-style:none;padding-left:0}
+.liste-cours li{padding:0.5rem 0;border-bottom:1px dashed #eee;display:flex;justify-content:space-between}
+.liste-cours a{text-decoration:none;color:#1a1a1a}
+
+.lecon{background:#fff;padding:1.25rem;border-radius:6px}
+
+.site-footer{text-align:center;padding:1rem 0;color:#777;font-size:0.9rem;margin-top:1rem}
+
+.btn{display:inline-block;padding:0.5rem 0.9rem;border-radius:5px;background:#111;color:#fff;text-decoration:none}
+
+@media (max-width:720px){
+  .site-header .wrap{flex-direction:column;align-items:flex-start}
+  .main-nav{margin-top:0.5rem}
+  .main-nav a{margin-left:0;margin-right:1rem}
+}
