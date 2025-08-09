@@ -1,0 +1,23 @@
+---
+layout: base.njk
+title: Accueil - Cours de philosophie
+---
+<section class="hero">
+  <h2>Bienvenue — Cours particuliers de philosophie</h2>
+  <p>Ressources : cours, textes, sujets de dissertation, commentaires de texte. Conçu pour les élèves de lycée et les étudiants.</p>
+  <p><a class="btn" href="/cours/">Voir les cours</a></p>
+</section>
+
+<section>
+  <h3>Dernières leçons</h3>
+  <ul class="liste-cours">
+    {% for item in collections.cours | slice(0,5) %}
+      <li>
+        <a href="{{ item.url }}">{{ item.data.title }}</a>
+        {% if item.date %}<span class="date">{{ item.date | date("dd LLL yyyy", "fr") }}</span>{% endif %}
+      </li>
+    {% else %}
+      <li>Aucun cours pour l'instant. Ajoute des fichiers Markdown dans <code>content/cours/</code>.</li>
+    {% endfor %}
+  </ul>
+</section>
