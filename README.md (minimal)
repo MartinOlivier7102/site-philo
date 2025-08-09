@@ -1,0 +1,8 @@
+# Site de philosophie - Eleventy
+
+## Commandes
+- `npm install`
+- `npm run dev` -> serveur local
+- `npm run build` -> build statique dans `_site/`
+
+Pour déployer sur Netlify/Vercel : relie le dépôt Git et configure la commande `npm run build` et dossier de sortie `_site`.
