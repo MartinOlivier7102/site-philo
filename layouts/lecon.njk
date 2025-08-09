@@ -1,0 +1,18 @@
+---
+layout: base.njk
+---
+<article class="lecon">
+  <header>
+    <h2>{{ title }}</h2>
+    {% if date %}
+      <p class="meta">Publié le {{ date | date("dd LLLL yyyy", "fr") }}</p>
+    {% endif %}
+  </header>
+
+  <section class="contenu-lecon">
+    {{ content | safe }}
+  </section>
+
+  <hr/>
+  <p><a href="/cours/">← Retour à la liste des cours</a></p>
+</article>
